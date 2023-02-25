@@ -13,6 +13,7 @@ describe('Forms TCs', () => {
 
   it('Verify the progress bar', () => {
     homePage.navigateByMenu('Progress Bar');
-    
+    widgetsPage.clickStartProgressBarButton();
+    widgetsPage.expectProgressBarFinished();
   });
 });
