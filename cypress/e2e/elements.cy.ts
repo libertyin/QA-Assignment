@@ -13,7 +13,7 @@ describe('Elements TCs', () => {
   });
 
   it('Verify user can enter new data into the table', () => {
-    elementsPage.navigateByMenu('Web Tables');
+    homePage.navigateByMenu('Web Tables');
     elementsPage.clickAddRecordButton();
     elementsPage.fillRecordRegistrationForm(record1);
     elementsPage.clickSubmitRecordButton();
@@ -21,7 +21,7 @@ describe('Elements TCs', () => {
   });
 
   it('Verify user can edit the row in a table', () => {
-    elementsPage.navigateByMenu('Web Tables');
+    homePage.navigateByMenu('Web Tables');
     elementsPage.clickEditRecordButton(2);
     elementsPage.changeRecordFirstName(record2.firstName);
     elementsPage.changeRecordLastName(record2.lastName);
@@ -30,7 +30,7 @@ describe('Elements TCs', () => {
   });
 
   it('Verify broken image', () => {
-    elementsPage.navigateByMenu('Broken Links - Images');
+    homePage.navigateByMenu('Broken Links - Images');
     elementsPage.expectBrokenImage('/images/Toolsqa_1.jpg');
   });
 });

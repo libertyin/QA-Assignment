@@ -1,6 +1,4 @@
 export class ElementsPage {
-  private menuSection: string;
-  /* web tables */
   private addRecordButton: string;
   private editRecordButton: string;
   private recordFirstNameInput: string;
@@ -14,7 +12,6 @@ export class ElementsPage {
   private recordTableCell: string;
 
   constructor() {
-    this.menuSection = '.menu-list li';
     this.editRecordButton = '#edit-record-';
     this.addRecordButton = '#addNewRecordButton';
     this.recordFirstNameInput = '#firstName';
@@ -26,10 +23,6 @@ export class ElementsPage {
     this.recordSubmitButton = '#submit';
     this.recordTableRow = '[role="rowgroup"]';
     this.recordTableCell = '[role="gridcell"]';
-  }
-
-  navigateByMenu(menuName: string) {
-    cy.get(this.menuSection).contains(menuName).click();
   }
 
   clickAddRecordButton() {

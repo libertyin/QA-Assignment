@@ -1,5 +1,4 @@
 export class FormsPage {
-  private menuSection: string;
   private formFirstNameInput: string;
   private formLastNameInput: string;
   private formEmailInput: string;
@@ -17,7 +16,6 @@ export class FormsPage {
   private formCloseButton: string;
 
   constructor() {
-    this.menuSection = '.menu-list li';
     this.formFirstNameInput = '#firstName';
     this.formLastNameInput = '#lastName';
     this.formEmailInput = '#userEmail';
@@ -33,10 +31,6 @@ export class FormsPage {
     this.formConfirmationHeader = '#example-modal-sizes-title-lg';
     this.formConfirmationData = 'tbody';
     this.formCloseButton = '#closeLargeModal';
-  }
-
-  navigateByMenu(menuName: string) {
-    cy.get(this.menuSection).contains(menuName).click();
   }
 
   fillStudentRegistrationForm(student: IFormRecord) {
