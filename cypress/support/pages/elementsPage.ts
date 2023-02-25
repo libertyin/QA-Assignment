@@ -73,4 +73,11 @@ export class ElementsPage {
         cy.get(this.recordTableCell).eq(5).should('have.text', record.department);
       });
   }
+
+  expectBrokenImage(imageUrl: string) {
+    cy.get(`img[src="${imageUrl}"]`).should('be.visible');
+    cy.get(`img[src="${imageUrl}"]`).then(($img) => {
+      expect($img[0].naturalWidth).to.eq(0);
+    });
+  }
 }

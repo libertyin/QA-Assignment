@@ -28,4 +28,9 @@ describe('Elements TCs', () => {
     elementsPage.clickSubmitRecordButton();
     elementsPage.expectRecordInTable(record2);
   });
+
+  it('Verify broken image', () => {
+    elementsPage.navigateByMenu('Broken Links - Images');
+    elementsPage.expectBrokenImage('/images/Toolsqa_1.jpg');
+  });
 });
