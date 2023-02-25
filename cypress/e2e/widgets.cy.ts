@@ -16,4 +16,11 @@ describe('Forms TCs', () => {
     widgetsPage.clickStartProgressBarButton();
     widgetsPage.expectProgressBarFinished();
   });
+
+  it('Verify the tooltip', () => {
+    homePage.navigateByMenu('Tool Tips');
+    widgetsPage.hoverTooltipButton();
+    widgetsPage.expectTooltipButtonText('You hovered over the Button'); //text from task "You hover over the button" is invalid
+  });
+
 });
