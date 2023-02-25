@@ -1,6 +1,6 @@
 import { HomePage } from '../support/pages/homePage';
 import { FormsPage } from '../support/pages/formsPage';
-import { student1 } from '../fixtures/studens';
+import { student1 } from '../fixtures/students';
 
 const homePage = new HomePage();
 const formsPage = new FormsPage();
