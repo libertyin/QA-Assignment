@@ -42,11 +42,8 @@ export class FormsPage {
 
     //cy.get(this.formDateOfBithInput).clear().type(student.date); - simple version, but date picker gets broken on clear()
     cy.get(this.formDateOfBithInput).click();
-    // Select the year (1990)
     cy.get('.react-datepicker__year-select').select('1990');
-    // Select the month (January)
     cy.get('.react-datepicker__month-select').select('0');
-    // Select the day (15th)
     cy.get('.react-datepicker__day--015').click();
 
     cy.get(this.formSubjectsInput).type(student.subjects).type('{enter}');
