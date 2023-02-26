@@ -1,6 +1,6 @@
 const API_BASE_URL = Cypress.config().baseUrl;
 
-export const addListOfBooks = (authToken: string, userId: string) => {
+export const addListOfBooks = (authToken: string, userId: string, books: any[]) => {
   cy.log('Add List Of Books Request');
   return cy
     .request({
@@ -11,16 +11,10 @@ export const addListOfBooks = (authToken: string, userId: string) => {
       },
       body: {
         userId: `${userId}`,
-        collectionOfIsbns: [
-          {
-            isbn: '9781449337711',
-            title: 'Test book',
-          },
-          {
-            isbn: '9781449337712',
-            title: 'Test book 2',
-          },
-        ],
+        collectionOfIsbns: books.map((book) => ({
+          isbn: book.isbn,
+          title: book.title,
+        })),
       },
     })
     .then((response) => {

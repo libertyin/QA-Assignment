@@ -19,10 +19,12 @@ describe('Book Store API TCs', () => {
   });
 
   it('Add a list of books', () => {
-    addListOfBooks(authToken, userId).then((response) => {
+    addListOfBooks(authToken, userId, books).then((response) => {
       expect(response.body.books).to.have.length(2);
       expect(response.body.books[0].isbn).to.eq(books[0].isbn);
+      expect(response.body.books[0].title).to.eq(books[0].title)
       expect(response.body.books[1].isbn).to.eq(books[1].isbn);
+      expect(response.body.books[1].title).to.eq(books[1].title)
     });
   });
 
