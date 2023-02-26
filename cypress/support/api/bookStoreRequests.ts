@@ -6,6 +6,7 @@ export const addListOfBooks = (authToken: string, userId: string, books: any[]) 
     .request({
       method: 'POST',
       url: `${API_BASE_URL}/BookStore/v1/Books`,
+      failOnStatusCode: false,
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
@@ -18,7 +19,6 @@ export const addListOfBooks = (authToken: string, userId: string, books: any[]) 
       },
     })
     .then((response) => {
-      expect(response.status).to.eq(201);
       return response;
     });
 };
@@ -29,6 +29,7 @@ export const deleteBookFromList = (authToken: string, userId: string, isbn: stri
     .request({
       method: 'DELETE',
       url: `${API_BASE_URL}/BookStore/v1/Book`,
+      failOnStatusCode: false,
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
@@ -38,7 +39,6 @@ export const deleteBookFromList = (authToken: string, userId: string, isbn: stri
       },
     })
     .then((response) => {
-      expect(response.status).to.eq(204);
       return response;
     });
 };

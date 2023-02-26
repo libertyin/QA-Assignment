@@ -8,3 +8,10 @@ export const books = [
     title: 'Test book 2',
   },
 ];
+
+export const invalidBooks = [
+  {
+    isbn: '123',
+    title: 'Test book',
+  }
+];

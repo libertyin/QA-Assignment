@@ -27,7 +27,7 @@ Tests can be run from ```package.json``` file scripts:
   + **forms.cy.ts**
   + **interactions.cy.ts**
   + **widgets.cy.ts**
-+ **e2e/bookStoreAPI.cy.ts** - API tests for task 8-10
++ **e2e/bookStoreAPI.cy.ts** - API tests for task 8-10. Creation of account is in before methord, Add/Delete books have 1 positive and 1 negative test
 + **fixtures** - test data used in tests
 + **interfaces** - interfaces for test data
 + **support/api** - api requests used in task 8-10
